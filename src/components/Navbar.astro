@@ -1,20 +1,22 @@
 <nav>
-    <button id="openMenu">
+    <button id="openMenu" class="md:hidden">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 6h16M4 12h16M4 18h16"/></svg>    
     </button>    
-    <ul id="navBar" class="fixed z-20 top-0 bottom-0 w-60 flex flex-col bg-gray-800 transition-all duration-300 -right-full">
-        <li class="flex items-center p-6 border-b border-gray-600">
+    <ul id="navBar" class="fixed z-40 top-0 bottom-0 w-60 hidden flex-col bg-gray-800 -right-full 
+        md:static md:flex md:flex-row md:w-auto md:bg-gray-900">
+        <li class="flex items-center p-6 border-b border-gray-600 md:hidden">
             <span class="text-2xl font-semibold">FAMAG</span>
             <button id="closeMenu" class="block ml-auto">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path d="M0 0h24v24H0z" stroke="none"/><path d="M18 6 6 18M6 6l12 12"/></svg>
             </button>
         </li>
-        <li><a class="p-6 block border-b-4 border-transparent hover:bg-gray-700 hover:border-gray-300 transition-all duration-200" href="/">Inicio</a></li>
-        <li><a class="p-6 block border-b-4 border-transparent hover:bg-gray-700 hover:border-gray-300 transition-all duration-200" href="/about">Nosotros</a></li>
-        <li><a class="p-6 block border-b-4 border-transparent hover:bg-gray-700 hover:border-gray-300 transition-all duration-200" href="/services">Servicios</a></li>
-        <li><a class="p-6 block border-b-4 border-transparent hover:bg-gray-700 hover:border-gray-300 transition-all duration-200" href="/contact">Contacto</a></li>
+        <li><a class="px-6 py-5 link-gradient md:py-3" href="/">Inicio</a></li>
+        <li><a class="px-6 py-5 link-gradient md:py-3" href="/about">Nosotros</a></li>
+        <li><a class="px-6 py-5 link-gradient md:py-3" href="/services">Servicios</a></li>
+        <li><a class="px-6 py-5 link-gradient md:py-3" href="/projects">Proyectos</a></li>
+        <li><a class="px-6 py-5 link-gradient md:py-3" href="/contact">Contacto</a></li>
     </ul>
-    <div id="overlay" class="hidden z-10 inset-0 bg-black/40"></div>
+    <div id="overlay" class="hidden fixed z-30 inset-0 bg-black/40 md:hidden"></div>
 </nav>
 
 <script>
@@ -24,25 +26,20 @@
     const overlay = document.querySelector('#overlay');
 
     openMenu?.addEventListener('click', () => {
-        navBar?.classList.remove('-right-full');
-        navBar?.classList.add('right-0');        
-
-        overlay?.classList.remove('hidden');
-        overlay?.classList.add('fixed');
+        navBar?.classList.replace('hidden','flex');
+        navBar?.classList.replace('-right-full', 'right-0');
+        overlay?.classList.replace('hidden', 'fixed');
     });
     
     closeMenu?.addEventListener('click', () => {
-        navBar?.classList.remove('right-0');
-        navBar?.classList.add('-right-full');
-        
-        overlay?.classList.remove('fixed');
-        overlay?.classList.add('hidden');
+        navBar?.classList.replace('right-0', '-right-full');
+        navBar?.classList.replace('flex','hidden');        
+        overlay?.classList.replace('fixed', 'hidden');
     });
 
     overlay?.addEventListener('click', () => {
-        navBar?.classList.remove('right-0');
-        navBar?.classList.add('-right-full');
-
+        navBar?.classList.replace('right-0', '-right-full');
+        navBar?.classList.replace('flex','hidden');
         overlay?.classList.add('hidden');
     });
 
@@ -51,7 +48,8 @@
 
     navLinks?.forEach((link) => {
         if((link as HTMLAnchorElement).href === currentUrl) {
-            link.classList.add('bg-gray-700', 'border-gray-300');
+            link.classList.replace('border-transparent', 'border-gray-300');
+            link.classList.add('active-link');
         }
     });
 </script>
