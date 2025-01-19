@@ -34,16 +34,20 @@ export default {
 		plugin(function({ addComponents }) {
 			addComponents({
 			  '.link-gradient': {
-				// 'background': 'linear-gradient(to bottom, #6990c7, #2b4779)',
-				// 'background-color':'transparent',
+				'position': 'relative',
 				'display': 'block',
 				'&:hover':{
 					'background': 'linear-gradient(to bottom, #2b4779, #6990c7)',
 				}				
 			  },
+
 			  '.active-link': {
 				'background': 'linear-gradient(to bottom, #6990c7, #2b4779)',
-			  },	  
+			  },
+			  
+			  '.cta-link': {
+				'background': 'linear-gradient(to bottom, #6990c7, #2b4779)',
+			  },
 			})
 		  })
 	],

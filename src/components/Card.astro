@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    imagePath: string;
+    imageAlt: string;
+}
+
+const { title, description, imagePath, imageAlt} = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-stretch gap-4 rounded-md py-6 px-8 bg-gradient-to-b from-mirage-500 to-mirage-800 xl:py-10">
+    <img src={imagePath} width="96" height="96" alt={imageAlt} />
+    <h2 class="font-bold text-balance text-lg text-center">{title}</h2>
+    <p>{description}</p>    
+</div>
+
+
+
+
