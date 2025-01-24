@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import torno from "/src/assets/service/torneando.webp"
+import soldador from "/src/assets/service/soldadormig.webp"
+import techo from "/src/assets/service/techo.webp"
+---
+
+<section>
+    <h2 class="text-lg text-center pb-10 md:text-2xl">NUESTROS SERVICIOS</h2>
+    <div class="text-mirage-900 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+        <div class="flex flex-col bg-mirage-200 rounded-md overflow-hidden">
+            <Image src={torno} alt="Maquina torneando un eje de cobre" class="object-cover h-72" />
+            <div class="p-8 space-y-4">
+                <h2 class="text-lg font-semibold">Servicios de Tornería y Mecánica de precisión</h2>
+                <p class="pb-4">Ofrecemos servicios de tornería de alta calidad para la fabricación de piezas industriales
+                     y la reparación de componentes mecánicos.
+                </p>
+                <a class="block mx-auto text-mirage-100 text-center p-2 cta-link w-40 rounded-sm hover:ring-4 hover:ring-mirage-900" href="/services">Ver más</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-mirage-200 rounded-md overflow-hidden">
+            <Image src={soldador} alt="Hombre usando maquina de soldadura" class="object-cover h-72" />
+            <div class="p-8 space-y-4">
+                <h2 class="text-lg font-semibold">Soldadura en general</h2>
+                <p class="pb-4">Realizamos trabajos de soldadura en general, utilizando técnicas avanzadas y materiales de alta calidad para garantizar resultados duraderos.</p>
+                <a class="block mx-auto text-mirage-100 text-center p-2 cta-link w-40 rounded-sm hover:ring-4 hover:ring-mirage-900" href="/services">Ver más</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col bg-mirage-200 rounded-md overflow-hidden sm:col-span-2 lg:col-span-1">
+            <Image src={techo} alt="Maquina torneando un eje de cobre" class="object-cover h-72" />
+            <div class="p-8 space-y-4">
+                <h2 class="text-lg font-semibold">Estructuras metálicas</h2>
+                <p class="pb-4">Diseñamos y construimos estructuras metálicas a medida para proyectos industriales, comerciales y residenciales.</p>
+                <a class="block mx-auto text-mirage-100 text-center p-2 cta-link w-40 rounded-sm hover:ring-4 hover:ring-mirage-900" href="/services">Ver más</a>
+            </div>
+        </div>
+
+        <!-- <CardService
+            title="Estructuras metálicas"
+            description="Diseñamos y construimos estructuras metálicas a medida para proyectos industriales, comerciales y residenciales."
+            imagePath="estructura-metalica.webp"
+            imageAlt="Estructura metálica en construcción"
+        />
+        <CardService
+            title="Soldadura"
+            description="Realizamos trabajos de soldadura en general, utilizando técnicas avanzadas y materiales de alta calidad para garantizar resultados duraderos."
+            imagePath="soldadura.webp"
+            imageAlt="Soldador trabajando en una estructura metálica"
+        /> -->
+    </div>
+</section>

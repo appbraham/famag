@@ -1,8 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-import tornoImg from '../assets/torno.webp';
+import tornoImg from '../assets/service/torno.webp';
 ---
-<section class="flex flex-col gap-4 items-stretch justify-center rounded-md overflow-hidden bg-mirage-300/20 lg:flex-row lg:gap-10">				
+<!-- <section class="flex flex-col items-stretch justify-center rounded-md overflow-hidden bg-gradient-to-b from-mirage-500 to-mirage-950 lg:flex-row lg:gap-10">				 -->
+<section class="relative flex flex-col items-stretch justify-center rounded-md overflow-hidden bg-mirage-500/30 lg:flex-row lg:gap-10">				
+    <div class="absolute -z-10 inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:16px_16px]"></div>
     <div class="px-8 py-12 flex flex-col justify-center gap-4 lg:gap-6 lg:basis-3/5 lg:leading-relaxed">
         <h2 class="text-center text-lg md:text-2xl lg:text-left">¿POR QUÉ ELEGIRNOS?</h2>
         <p>En Corporación FAMAG S.A.C, somos expertos en tornería, estructuras metálicas y soldadura en general. 
@@ -14,6 +16,7 @@ import tornoImg from '../assets/torno.webp';
             de vanguardia, garantizamos resultados precisos y duraderos. Nuestra misión es superar las expectativas de nuestros
             clientes, proporcionando servicios confiables y un compromiso inigualable con la excelencia.
         </p>
+        <!-- <a href="#" class="mx-auto text-center p-2 cta-link w-40 rounded-sm hover:ring-4 hover:ring-mirage-200">Contactar</a> -->
         <!-- <p>Nuestros servicios abarcan desde la fabricación de piezas 
             industriales hasta la construcción de estructuras metálicas a medida.
             En Corporación FAMAG S.A.C, nos enorgullece ofrecer soluciones integrales y personalizadas 

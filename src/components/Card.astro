@@ -9,10 +9,10 @@ interface Props {
 const { title, description, imagePath, imageAlt} = Astro.props;
 ---
 
-<div class="flex flex-col items-center justify-stretch gap-4 rounded-md py-6 px-8 bg-gradient-to-b from-mirage-500 to-mirage-800 xl:py-10">
+<div class="flex flex-col items-center justify-stretch gap-4 rounded-md py-6 px-8 bg-gradient-to-t from-mirage-700 to-mirage-500 xl:py-10">
     <img src={imagePath} width="96" height="96" alt={imageAlt} />
     <h2 class="font-bold text-balance text-lg text-center">{title}</h2>
-    <p>{description}</p>    
+    <p class="text-pretty">{description}</p>    
 </div>
 
 

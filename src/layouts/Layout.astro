@@ -3,6 +3,7 @@ import '@fontsource/poppins';
 
 import Navbar from "../components/Navbar.astro";
 import Logo from '../components/Logo.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -14,13 +15,17 @@ import Logo from '../components/Logo.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class="container bg-mirage-950 pattern text-mirage-50 py-4 md:py-8 lg:py-12">
-		<header class="flex justify-between items-center">		
+	<body class="bg-mirage-950 text-mirage-50">
+		<!-- <div class="fixed -z-10 inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:16px_16px]"></div> -->
+		<header class="container flex justify-between items-center pt-4 md:pt-8 lg:pt-12">		
 			<Logo />
 			<Navbar />
 		</header>
-		<main class="flex flex-col gap-4 my-10 lg:gap-10">
+		<main class="container flex flex-col gap-10 my-10">
 			<slot />
 		</main>
+		<footer class="bg-mirage-800/70">
+			<Footer />
+		</footer>
 	</body>
 </html>

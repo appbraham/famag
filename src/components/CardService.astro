@@ -1,0 +1,22 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    title: string;
+    description: string;
+    imagePath: string;
+    imageAlt: string;
+}
+
+const { title, description, imagePath, imageAlt} = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/service/*.{webp,jpeg,jpg,png,gif}');
+if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/service/*.{webp,jpeg,jpg,png,gif}"`);
+---
+
+<div class="flex flex-col gap-4 rounded-md bg-mirage-200 text-mirage-900 overflow-hidden">
+    <h2 class="font-bold text-balance px-8 pt-8 text-lg">{title}</h2>
+    <p class="text-pretty px-8">{description}</p>
+    <Image class="object-cover object-center w-full h-64 mt-auto" src={images[imagePath]()} alt={imageAlt} />
+</div>

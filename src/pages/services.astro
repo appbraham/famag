@@ -1,7 +1,49 @@
 ---
+import CardService from "../components/CardService.astro"
+import StartProject from "../components/StartProject.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-    <h1>Services</h1>
+    <h1 class="text-2xl text-center lg:text-3xl lg:mb-4">Nuestros Servicios</h1>
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+        <CardService 
+            title="Fabricación de piezas"
+            description="Nos especializamos en la fabricación de piezas de alta precisión para una variedad de industrias. Utilizando maquinaria de última generación y técnicas avanzadas, garantizamos la máxima calidad en cada componente que producimos."
+            imagePath="/src/assets/service/torno-cobre.webp"
+            imageAlt="Servicios de Mecánica de presición"
+        />
+        <CardService 
+            title="Soldadura especializada"
+            description="Trabajamos con una variedad de materiales y procesos, incluyendo soldadura MIG, TIG y por arco, aseguramos uniones fuertes y duraderas en cada pieza, para garantizar la máxima precisión y calidad."
+            imagePath="/src/assets/service/welder-tig.webp"
+            imageAlt="Servicios de Mecánica de presición"
+        />
+        <CardService 
+            title="Fabricación de engranajes"
+            description="Diseñamos y producimos engranajes que garantizan un rendimiento óptimo y una durabilidad excepcional. Nuestros procesos rigurosos aseguran que cada engranaje se adapte perfectamente a las necesidades específicas de nuestros clientes."
+            imagePath="/src/assets/service/engrane.webp"
+            imageAlt="Servicios de Mecánica de presición"
+        />
+        <CardService 
+            title="Fabricación de bomba de agua"
+            description="Diseñamos, fabricamos y reparamos bombas de agua de alta presión, así como tambien fabricamos la base para esta misma, Nuestras bombas de agua pueden ser usados en la agricultura o minería, según la necesidad de nuestros clientes."
+            imagePath="/src/assets/service/motobomba.webp"
+            imageAlt="Servicios de Mecánica de presición"
+        />
+        <CardService 
+            title="Prensa hidráulica de alta capacidad"
+            description="Contamos con una moderna prensa hidráulica al servicio de nuestros clientes, para enderezar, ajustar, perforar, fabricar piezas, doblar y prensar. Nuestra prensa hidráulica proporcionan fuerza y precisión en cada operación."
+            imagePath="/src/assets/service/prensa.webp"
+            imageAlt="Servicios de Mecánica de presición"
+        />
+        <CardService 
+            title="Techos parabólicos y techos a dos aguas"
+            description="Producimos techos parabólicos  y techos a dos aguas, que no solo son resistentes y duraderos, sino que también proporcionan un diseño arquitectónico moderno y elegante. Son ideales para una variedad de aplicaciones, desde edificios industriales hasta proyectos residenciales y comerciales."
+            imagePath="/src/assets/service/techodosaguas.webp"
+            imageAlt="Servicios de Mecánica de presición"
+        />
+    </section>
+    <StartProject />
+
 </Layout>
