@@ -4,6 +4,7 @@ import '@fontsource/poppins';
 import Navbar from "../components/Navbar.astro";
 import Logo from '../components/Logo.astro';
 import Footer from '../components/Footer.astro';
+import Whatsapp from '../components/Whatsapp.astro';
 ---
 
 <!doctype html>
@@ -16,8 +17,7 @@ import Footer from '../components/Footer.astro';
 		<title>Astro Basics</title>
 	</head>
 	<body class="bg-mirage-950 text-mirage-50">
-		<!-- <div class="fixed -z-10 inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:16px_16px]"></div> -->
-		<header class="container flex justify-between items-center pt-4 md:pt-8 lg:pt-12">		
+		<header class="container flex justify-between items-center pt-4 md:pt-8">		
 			<Logo />
 			<Navbar />
 		</header>
@@ -27,5 +27,6 @@ import Footer from '../components/Footer.astro';
 		<footer class="bg-mirage-800/70">
 			<Footer />
 		</footer>
+		<Whatsapp />
 	</body>
 </html>
