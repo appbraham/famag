@@ -1,4 +1,6 @@
 ---
+import ContactButton from "./ContactButton.astro";
+
 
 ---
 <section class="relative rounded-md overflow-clip">
@@ -8,7 +10,7 @@
     <div class="absolute z-10 inset-0 bg-gray-950/50 flex flex-col items-center justify-center gap-6 p-6 lg:gap-10 lg:px-20">
         <h1 class="text-lg font-semibold text-center text-balance tracking-wider lg:leading-10 lg:text-3xl">SOMOS ESPECIALISTAS EN TORNERIA, ESTRUCTURAS METÁLICAS Y SOLDADURA EN GENERAL</h1>
         <p class="italic text-center lg:text-xl">"Torneando calidad, soldando confianza"</p>
-        <a class="text-sm cta-link py-2 px-4 rounded-sm hover:ring-4 hover:ring-mirage-200 lg:text-md lg:px-6 lg:py-3" href="/contact">Contáctanos</a>
+        <ContactButton />
     </div>
 
 </section>

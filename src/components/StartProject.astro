@@ -1,14 +1,14 @@
 ---
 interface Props{
     title: string;
-    link?: boolean;
+    showLink?: boolean;
 }
 
-const { title, link=false } = Astro.props;
+const { title, showLink=true } = Astro.props;
 ---
 <section class="relative flex flex-col gap-8 px-8 py-12 items-center justify-center rounded-md overflow-hidden lg:gap-10 lg:py-14
                 after:absolute after:block after:inset-0 after:bg-black/50 after:-z-10">
     <div class="absolute inset-0 -z-10 pattern-isometric pattern-mirage-400 pattern-bg-transparent pattern-opacity-40 pattern-size-8"></div>
-    <h2 class="text-balance text-xl text-center uppercase leading-normal font-bold md:text-3xl">{title}</h2>
-    <a class={link? "hidden" : "cta-link px-4 py-2 rounded-md hover:ring-4 hover:ring-mirage-200 lg:text-md lg:px-6"} href="/contact">Contáctenos</a>
+    <h2 class="text-balance text-xl text-center leading-normal font-bold md:text-3xl">{title}</h2>
+    <a class={showLink? "cta-link px-4 py-2 rounded-md hover:ring-4 hover:ring-mirage-200 lg:text-md lg:px-6" : "hidden"} href="/contact">Contáctenos</a>
 </section>
